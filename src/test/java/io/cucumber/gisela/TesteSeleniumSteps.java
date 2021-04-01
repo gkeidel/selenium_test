@@ -84,13 +84,39 @@ public class TesteSeleniumSteps {
     occupation.selectByVisibleText("Employee");
     WebElement hobbies = driver.findElement(By.xpath("//label[text()=' Bungee Jumping']"));
     hobbies.click();
-     
+    WebElement botaoNext = driver.findElement(By.id("nextenterproductdata"));
+    botaoNext.click();
+    WebElement date = driver.findElement(By.id("startdate"));
+    date.sendKeys("08/15/2021");
+    Select insuranceSum = new Select(driver.findElement(By.id("insurancesum")));
+    insuranceSum.selectByIndex(3);
+    Select meritRating = new Select(driver.findElement(By.id("meritrating")));
+    meritRating.selectByIndex(7);
+    Select damageInsurance = new Select(driver.findElement(By.id("damageinsurance")));
+    damageInsurance.selectByVisibleText("Full Coverage");
+    WebElement optionalProducts = driver.findElement(By.xpath("//label[text()='Euro Protection']"));
+    optionalProducts.click();
+    Select courtesyCar = new Select(driver.findElement(By.id("courtesycar"))) ;
+    courtesyCar.selectByVisibleText("Yes");
+    WebElement nextStep = driver.findElement(By.id("nextselectpriceoption"));
+    nextStep.click();
   }
 
-  @Entao("clico no botao next")
-  public void clico_next() {
-    WebElement botao = driver.findElement(By.id("nextenterproductdata"));
-    botao.click(); 
-  }
+  @Entao("eu seleciono a opcao")
+  public void eu_seleciono_a_opcao() {
+    WebElement priceOption = driver.findElement(By.xpath("//input[@value='Gold']"));
+    priceOption.click();
+}
 
+// @Entao("clico next")
+// public void clico_next() {
+//     // Write code here that turns the phrase above into concrete actions
+//     throw new io.cucumber.java.PendingException();
+// }
+
+
+
+
+
+  
 }

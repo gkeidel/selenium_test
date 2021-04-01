@@ -8,6 +8,10 @@ Funcionalidade: Teste Gama Academy
     E preencho o formulario
     Entao clico em next
     E preencho dados do formulario Insurant Data
+    Entao clico no botao next
+    E preencho dados do formulario Product Data
+    Entao eu seleciono a opcao 
+    E clico next
   
 
 # Entrar no site http://sampleapp.tricentis.com/101/app.php
