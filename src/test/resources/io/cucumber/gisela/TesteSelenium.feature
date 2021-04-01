@@ -4,10 +4,11 @@ Funcionalidade: Teste Gama Academy
   Teste individual para verificar o conteúdo aprendido
 
   Cenario: Entrar no site da Tricentis e rodar alguns testes
-  Dado que entro no site da tricentis
-  E preencho o formulario
-  Entao clico em next
-
+    Dado que entro no site da tricentis
+    E preencho o formulario
+    Entao clico em next
+    E preencho dados do formulario Insurant Data
+  
 
 # Entrar no site http://sampleapp.tricentis.com/101/app.php
 

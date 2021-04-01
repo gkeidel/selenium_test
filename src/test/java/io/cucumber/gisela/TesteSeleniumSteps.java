@@ -59,6 +59,37 @@ public class TesteSeleniumSteps {
   @Entao("clico em next")
   public void clico_em_next() {
     WebElement botaoNext = driver.findElement(By.id("nextenterinsurantdata"));
-    botaoNext.click();
+    botaoNext.click(); 
   }
+
+  @Entao("preencho dados do formulario Insurant Data")
+  public void preencho_dados_do_formulario_Insurant_Data() {
+   WebElement inputFirstName = driver.findElement(By.id("firstname"));
+   inputFirstName.sendKeys("Jane");
+   WebElement inputLastName = driver.findElement(By.id("lastname"));
+   inputLastName.sendKeys("Doe");
+   WebElement dateBirth = driver.findElement(By.id("birthdate"));
+   dateBirth.sendKeys("01/30/1981");
+  //  WebElement gender = driver.findElement(By.cssSelector("ideal-radiocheck-label"));
+  //  gender.click();
+   WebElement streetAddress = driver.findElement(By.id("streetaddress"));
+   streetAddress.sendKeys("Rua Putinga");
+   Select country = new Select(driver.findElement(By.id("country")));
+    country.selectByVisibleText("Brazil");
+    WebElement zipCode = driver.findElement(By.id("zipcode"));
+    zipCode.sendKeys("52191281");
+    WebElement city = driver.findElement(By.id("city"));
+    city.sendKeys("Recife");
+    Select occupation = new Select(driver.findElement(By.id("occupation")));
+    occupation.selectByVisibleText("Employee");
+  
+    
+  }
+
+  @Entao("clico no botao next")
+  public void clico_next() {
+    WebElement botaoNext = driver.findElement(By.id("nextenterproductdata"));
+    botaoNext.click(); 
+  }
+
 }
