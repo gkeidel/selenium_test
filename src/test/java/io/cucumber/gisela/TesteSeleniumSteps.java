@@ -82,14 +82,15 @@ public class TesteSeleniumSteps {
     city.sendKeys("Recife");
     Select occupation = new Select(driver.findElement(By.id("occupation")));
     occupation.selectByVisibleText("Employee");
-  
-    
+    WebElement hobbies = driver.findElement(By.xpath("//label[text()=' Bungee Jumping']"));
+    hobbies.click();
+     
   }
 
   @Entao("clico no botao next")
   public void clico_next() {
-    WebElement botaoNext = driver.findElement(By.id("nextenterproductdata"));
-    botaoNext.click(); 
+    WebElement botao = driver.findElement(By.id("nextenterproductdata"));
+    botao.click(); 
   }
 
 }
